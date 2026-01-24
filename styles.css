@@ -2,17 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Gradient color class (VERY IMPORTANT CONCEPT) */
 
 .gradient-text {
-  background: linear-gradient(
-    90deg,
-    #ffdd55,
-    #ff2fb3,
-    #7a3dff
-  );
+  background: linear-gradient(90deg, #ffdd55, #ff2fb3, #7a3dff);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -20,7 +16,6 @@
   background-clip: text;
   color: transparent;
 }
-
 
 #navigation {
   background-color: #1a0b2e;
@@ -34,7 +29,6 @@
   padding: 30px 0;
   color: white;
 }
-
 
 #navigation .nav-item {
   margin: 36.5px 0;
@@ -62,13 +56,9 @@
   border-radius: 999px;
   cursor: pointer;
 
-  background: linear-gradient(
-    90deg,
-    #ffdd55,
-    #ff2fb3,
-    #7a3dff);
+  background: linear-gradient(90deg, #ffdd55, #ff2fb3, #7a3dff);
 
-    box-shadow:
+  box-shadow:
     0 8px 20px rgba(255, 47, 179, 0.4),
     0 0 12px rgba(122, 61, 255, 0.5);
 }
@@ -80,90 +70,100 @@
     0 0 18px rgba(122, 61, 255, 0.7);
 }
 
-
 button img {
   height: 20px;
   width: 20px;
   margin: 2px 0;
 }
 
-#banner .image-container {
+#banner {
   width: 100%;
- min-height: 100vh;
+  min-height: 760px;
   position: relative;
+  background-color: #1a0b2e;
   overflow: hidden;
+}
+#banner .image-container {
+  position: absolute;
+  inset: 0;
+  /*  er mane parent er thik niche top bottom right left e kuno gap hobe nah */
 }
 
 .img-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
   z-index: 1;
 }
 
 .img-2 {
   position: absolute;
-  top: 101px;
-  left: 600px;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
 }
 
 .img-3 {
   position: absolute;
-  top: 178px;
-  left:720px;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
-  
 }
 
-
-#banner .new button{
-  position:absolute;
-  top:205px;
-  left:908px; ;
-  z-index:4;
-  color: #1A0B2E;
-  background-color: #00FF88;
+#banner .new button {
+  position: absolute;
+  top: 100px;
+  left: 850px;
+  z-index: 4;
+  color: #1a0b2e;
+  background-color: #00ff88;
   padding: 8px 16px;
   font-size: 18px;
   font-weight: 400;
   border: none;
   border-radius: 1000px;
-  box-shadow: 0 3px 27px #00FF88;
+  box-shadow: 0 3px 27px #00ff88;
 }
 
-#banner .text-container{
-  position: absolute;
-  z-index: 4;
-  top: 600px;
-  left: 550px;
+#banner .text-container {
+  position: relative;
+  z-index: 6;
+  margin-top: 420px;
+
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-#banner .text-container h2{
+#banner .text-container .text h2 {
   font-size: 60px;
   font-weight: bolder;
   color: white;
-  padding: 10px 0;
+  padding: 20px 0;
+  order: 1;
 }
 
-#banner .text-container p{
+#banner .text-container p {
   font-size: 16px;
   font-weight: normal;
   color: white;
   padding: 20px 0;
+  order: 2;
 }
 
-#banner .text-container .btn{
+#banner .btn {
   display: flex;
-  gap: 8px;
-  /* margin-bottom: 101px; */
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
 }
 
-#banner .text-container .btn .btn-1{
+#banner .btn .btn-1 {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -178,18 +178,14 @@ button img {
   border-radius: 1000px;
   cursor: pointer;
 
-  background: linear-gradient(
-    90deg,
-    #ffdd55,
-    #ff2fb3,
-    #7a3dff);
+  background: linear-gradient(90deg, #ffdd55, #ff2fb3, #7a3dff);
 
-    box-shadow:
+  box-shadow:
     0 3px 20px rgba(255, 47, 179, 0.4),
     0 0 12px rgba(122, 61, 255, 0.5);
 }
 
-#banner .text-container .btn .btn-2{
+#banner .btn .btn-2 {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -200,27 +196,249 @@ button img {
   font-weight: 600;
   color: white;
 
-  border: 2px solid #00FF88;
+  border: 2px solid #00ff88;
   border-radius: 1000px;
   cursor: pointer;
 
   background: none;
 }
 
-#About .about-text{
-  background-color: #1A0B2E;
+#About {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  color:white;
-  /* margin-top: 50px; */
-
-  width: 70%;
+  /* gap: 160px; */
+  background-color: #1a0b2e;
 }
 
+#About .about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 1200px;
+  color: white;
+}
 
+#About .about-text h3 {
+  font-size: 48px;
+  font-weight: bold;
+}
 
+#About .about-text p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  margin-top: 16px;
+}
 
+#About .about-text span {
+  margin-top: 80px;
+}
 
+.center-line {
+  width: 1200px;
+  height: 0.5px;
+  background-color: white;
+  margin: 80px auto;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 120px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.card h2 {
+  font-size: 48px;
+  color: #00ff88;
+}
+
+#About .card-container .card p {
+  font-style: 18px;
+  color: white;
+}
+
+#why-techwave {
+  padding: 80px 200px;
+  background-color: #230e3d;
+}
+
+#why-techwave img {
+  height: 50px;
+  width: 50px;
+}
+
+#why-techwave h2 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+#why-techwave .card-normal {
+  background: #351165;
+  border: none;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 273px;
+  width: 380px;
+  color: white;
+}
+
+#why-techwave .card-normal h3 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px 0;
+}
+
+#why-techwave .card-normal p {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+#why-techwave .card-tall {
+  background: #351165;
+  border: none;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  height: 480px;
+  width: 380px;
+  color: white;
+}
+
+#why-techwave .card-tall h3 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px 0;
+}
+
+#why-techwave .card-tall p {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+#why-techwave .card-wide {
+  background: #351165;
+  border: none;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+  height: 273px;
+  width: 790px;
+  color: white;
+}
+
+#why-techwave .card-wide h3 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px 0;
+}
+
+#why-techwave .card-wide p {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+#why-techwave .card-mid1 {
+  background: #351165;
+  border: none;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+  height: 225px;
+  width: 790px;
+  color: white;
+}
+
+#why-techwave .card-mid1 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px 0;
+}
+
+#why-techwave .card-mid1 p {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+#why-techwave .card-mid2 {
+  background: #351165;
+  border: none;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+  height: 225px;
+  width: 790px;
+  color: white;
+}
+
+#why-techwave .card-mid2 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px 0;
+}
+
+#why-techwave .card-mid2 p {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+/* Grid Area defining MOST IMPORTANT */
+
+.card-tall{
+  grid-area: tall;
+}
+.card-mid1{
+  grid-area: mid1;
+}
+.card-mid2{
+  grid-area: mid2;
+}
+.card-wide{
+  grid-area: wide;
+}
+.card-normal{
+  grid-area: normal;
+}
+
+#why-techwave .features-grid{
+  display: grid;
+  gap: 30px;
+  grid-template-areas: 
+  "tall mid1 mid1"
+  "tall mid2 mid2"
+  "wide wide normal"
+  ;
+}
 
