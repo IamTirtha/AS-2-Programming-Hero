@@ -442,3 +442,109 @@ button img {
   ;
 }
 
+#content{
+  justify-content: space-around;
+  padding: 40px;
+  background-color: #1A0B2E;
+  color: white;
+}
+
+
+#content .content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+#content .content-container h2{
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#content .content-container .video-card-container{
+  display:flex;
+  gap: 10px;
+}
+
+#content  .video-card{
+  border: none;
+  border-radius: 24px;
+  background-color: #250D44;
+  color: white;
+  width: 380px;
+  height: 440px;
+}
+
+#content  .video-card .thumbnail img{
+    height: 214px;
+    width: 380px;
+    border-radius: 24px 24px 0 0;
+}
+
+#content  .video-card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  padding: 24px;
+  gap: 12px;
+}
+
+#content  .video-card .card-content h3{
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+#content  .video-card .card-content p{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#content  .video-card .card-content span{
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00ff88;
+  gap: 6px;
+}
+
+#content .host-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px;
+  gap: 24px;
+  border: none;
+  background-color: #351165;
+  border-radius: 40px;
+  width: 1200px;
+  height: 280px;
+}
+
+#content .host-content{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#content .host-content h3{
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#content .host-content .social-logo {
+  display: flex;
+  gap: 8px;
+}
+
+#content .host-content .social-logo img{
+  padding: 12.5px;
+  border: 0.5px solid #533C72;
+  border-radius: 1000px;
+}
+
+
+
